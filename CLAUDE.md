@@ -45,7 +45,7 @@
 │   ├── schema.json          ← 允許的頁面類型、欄位、標籤、禁止字詞
 │   ├── scholarships/        ← A：獎學金頁（一個獎學金一頁，跨年度更新）
 │   ├── guides/              ← A：僑輔指南頁（一個主題一頁）
-│   ├── lists/events.md      ← A：活動總表（一張表，新活動加在最上面）
+│   ├── lists/               ← A：總表（events 活動、event-reviews 活動回顧、jobs 徵才；新資料加在最上面）
 │   ├── sop/                 ← B：維護手冊頁（一個作業一頁）
 │   ├── meta/                ← 關於本站
 │   ├── log.md               ← 更新紀錄（只在最上方新增）
@@ -76,7 +76,7 @@
 
 `類別` 只能用：`scholarship`、`event`、`job`、`news`、`regulation`。
 
-主辦單位縮寫：`ocac` 僑委會、`ocah` 華僑協會總會、`ocfef` 僑聯文教基金會、`nsysu` 中山大學；其他單位用英文簡稱，第一次使用時寫進 log。
+主辦單位縮寫：`ocac` 僑委會、`ocah` 華僑協會總會、`ocfef` 僑聯文教基金會、`moe` 教育部、`delta` 台達電子文教基金會、`nsysu` 中山大學（公告沒寫出資單位、由學校受理時也用 `nsysu`）；其他單位用英文簡稱，第一次使用時寫進 `schema.json` 的 `organizers` 與 log。**完全看不出主辦單位**時，改用主題簡稱（例：`sea-medical-talent`）。
 
 ### 2.2 Front matter
 
@@ -156,6 +156,8 @@ summary: 一句話（30 字以內）
    - **獎學金，已有頁面** → 更新原頁：把舊年度的重點一覽搬到「歷年紀錄」表格最上面一列，再改寫成新年度內容；更新 `academic_year`、`deadline`、`official_url`、`updated`、`sources`。
    - **獎學金，沒有頁面** → 複製 `templates/scholarship.md` 建新頁。
    - **活動** → 在 `wiki/lists/events.md` 表格最上面加一列。
+   - **活動回顧** → 在 `wiki/lists/event-reviews.md` 對應學年度的表格加一列，並更新「每年固定舉辦的活動」表的 ✓。
+   - **徵才、兼職、實習** → 在 `wiki/lists/jobs.md` 表格最上面加一列。
    - **規定變動**（工作許可、居留、保險……）→ 更新對應的 guide 頁，並更新 `checked`。
 3. **動手前先列出計畫**（要新增／更新哪些檔案）給使用者確認。
 4. 執行修改。

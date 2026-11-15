@@ -133,6 +133,18 @@ aside .panel li { margin: 4px 0; }
 .flow span { background: var(--card); padding: 8px 12px; border-radius: 10px; box-shadow: var(--shadow); }
 .flow i { color: var(--muted); font-style: normal; }
 
+/* 獎學金月份時程 */
+.timeline-wrap { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px 18px; margin-bottom: 18px; }
+.tl-title { margin: 0 0 10px; font-size: 16px; }
+.timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+@media (max-width: 820px) { .timeline { grid-template-columns: repeat(3, 1fr); } }
+.tl-col { background: var(--paper); border-radius: 10px; padding: 8px; min-height: 70px; }
+.tl-now { outline: 2px solid var(--amber); background: var(--amber-soft); }
+.tl-month { font-size: 13px; font-weight: 700; color: var(--teal); margin-bottom: 6px; }
+.tl-item { display: block; font-size: 12px; line-height: 1.4; background: #fff; border-radius: 6px; padding: 4px 6px; margin-bottom: 4px; text-decoration: none; color: var(--ink); border-left: 3px solid var(--teal); }
+.tl-item:hover { background: var(--teal-soft); }
+.tl-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: 13px; }
 .site-footer p { margin: 4px 0; }
 

@@ -7,7 +7,7 @@ status: done
 updated: 2026-11-15
 sources: [worklog/2026-11-15.md, worklog/2026-11-15-2.md, worklog/2026-11-15-6.md, worklog/2026-11-15-7.md, worklog/2026-11-15-8.md]
 summary: 從收到資訊、討論、後台新增、排版到轉發 FB 的完整流程
-affects: [events, ocac-outstanding, ocah-scholarship-grant, ocah-shen-memorial, ocah-thesis-award, ocfef-scholarship, cantonese-tpe-scholarship]
+affects: [events, jobs, ocac-outstanding, ocah-scholarship-grant, ocah-shen-memorial, ocah-thesis-award, ocfef-scholarship, cantonese-tpe-scholarship, moe-grad-outstanding, nsysu-needy-grant, nsysu-learning-assistance, delta-thai-north, nsysu-thai-myanmar, sea-medical-talent]
 ---
 
 ## 什麼時候用

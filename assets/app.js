@@ -99,6 +99,11 @@
         <div class="grid">${ofType("guide").map(plainCard).join("")}</div>
       </section>
 
+      <section class="section">
+        <div class="section-head"><h2>活動與徵才總表</h2></div>
+        <div class="grid">${ofType("list").map(plainCard).join("")}</div>
+      </section>
+
       <section class="section section-b">
         <div class="section-head"><h2>官網維護手冊</h2><span class="sub">給管理者與接手的人</span></div>
         <div class="flow" style="margin-bottom:14px">
@@ -119,6 +124,23 @@
     return renderMd(parts);
   }
 
+  // ---------- 獎學金月份時程（依 usual_month 自動產生） ----------
+  function timeline(list) {
+    const cur = today().getMonth() + 1;
+    const cols = Array.from({ length: 12 }, (_, i) => i + 1).map(m => {
+      const items = list.filter(p => p.usual_month === m);
+      return `<div class="tl-col ${m === cur ? "tl-now" : ""}">
+        <div class="tl-month">${m} 月${m === cur ? "・本月" : ""}</div>
+        ${items.map(p => `<a class="tl-item" href="${link(p.id)}" title="${esc(p.summary)}">${esc(p.title)}</a>`).join("")}
+      </div>`;
+    }).join("");
+    return `<div class="timeline-wrap">
+      <h3 class="tl-title">一年中，各獎學金通常幾月公告</h3>
+      <div class="timeline">${cols}</div>
+      <p class="tl-note">依各獎學金最近一次公告的月份推算，實際以官網為準。</p>
+    </div>`;
+  }
+
   // ---------- 列表頁 ----------
   function list(type) {
     const all = type === "scholarship" ? sortScholarships(ofType(type)) : ofType(type);
@@ -132,6 +154,7 @@
       <div class="section ${type === "sop" ? "section-b" : ""}">
         <div class="section-head"><h2>${titles[type]}</h2><span class="sub">${all.length} 頁</span></div>
         <p style="color:var(--muted);margin-top:-6px">${notes[type]}</p>
+        ${type === "scholarship" ? timeline(all) : ""}
         <div class="toolbar"><input class="search" id="q" placeholder="搜尋標題、對象、摘要…" autocomplete="off"></div>
         <div class="grid" id="items"></div>
       </div>`;

@@ -1,6 +1,6 @@
 {
   "generated_by": "scripts/build_index.py",
-  "page_count": 19,
+  "page_count": 31,
   "last_updated": "2026-11-15",
   "types": {
     "scholarship": "獎學金",
@@ -26,9 +26,19 @@
     "about",
     "after-graduation",
     "cantonese-tpe-scholarship",
+    "care-support",
+    "clubs",
+    "delta-thai-north",
+    "event-reviews",
     "events",
+    "host-family",
     "insurance",
+    "jobs",
+    "moe-grad-outstanding",
     "naming-rules",
+    "nsysu-learning-assistance",
+    "nsysu-needy-grant",
+    "nsysu-thai-myanmar",
     "ocac-outstanding",
     "ocah-scholarship-grant",
     "ocah-shen-memorial",
@@ -37,10 +47,12 @@
     "orientation",
     "publish-announcement",
     "residence",
+    "sea-medical-talent",
     "sync-to-wiki",
     "tutoring",
     "update-event-review",
     "verify-external-info",
+    "work-in-taiwan",
     "work-permit"
   ],
   "pages": [
@@ -64,6 +76,117 @@
       "official_url": "https://sis.nsysu.edu.tw/SIMS/search_view.php?TYPE=1&SP_SNO=10112-232",
       "links": [
         "naming-rules"
+      ]
+    },
+    {
+      "id": "delta-thai-north",
+      "title": "台達電子文教基金會泰北來台僑生獎助學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "泰北清邁、清萊來台的大學部僑生，每名 8 萬元，每年 8 名",
+      "path": "wiki/scholarships/delta-thai-north.md",
+      "organizer": "台達電子文教基金會",
+      "audience": "泰北清邁、清萊地區來台的大學部一至四年級清寒僑生",
+      "amount": "80,000 元",
+      "academic_year": 115,
+      "deadline": "2026-06-15",
+      "usual_month": 5,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-375879,r4455.php?Lang=zh-tw",
+      "links": [
+        "naming-rules",
+        "nsysu-thai-myanmar"
+      ]
+    },
+    {
+      "id": "moe-grad-outstanding",
+      "title": "教育部研究所優秀僑生獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "碩博士僑生，每學期 6 萬元，開學後 2 週內申請",
+      "path": "wiki/scholarships/moe-grad-outstanding.md",
+      "organizer": "教育部（校內由國際事務處僑外組受理）",
+      "audience": "本校研究所碩士、博士班僑生",
+      "amount": "每學期 60,000 元",
+      "academic_year": 115,
+      "deadline": "2026-09-21",
+      "usual_month": 8,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-380667,r4455.php?Lang=zh-tw",
+      "links": []
+    },
+    {
+      "id": "nsysu-learning-assistance",
+      "title": "僑生學習扶助金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship",
+        "work"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "生活困難的大學部僑生，每週服務 3 小時，不需工作證",
+      "path": "wiki/scholarships/nsysu-learning-assistance.md",
+      "organizer": "國立中山大學國際事務處僑外組",
+      "audience": "家境清寒、生活困難的大學部在學僑生",
+      "amount": "官網未載明",
+      "academic_year": 115,
+      "deadline": "2026-08-31",
+      "usual_month": 8,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-380107,r4455.php?Lang=zh-tw",
+      "links": [
+        "clubs",
+        "work-permit"
+      ]
+    },
+    {
+      "id": "nsysu-needy-grant",
+      "title": "清寒僑生助學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "家境清寒的大學部僑生，今年每月 3,000 元，核給一年",
+      "path": "wiki/scholarships/nsysu-needy-grant.md",
+      "organizer": "教育部（校內由國際事務處僑外組受理）",
+      "audience": "家境清寒的在學僑生（不含研究生、延修生）",
+      "amount": "每月 3,000 元，核給一年",
+      "academic_year": 115,
+      "deadline": "2026-09-21",
+      "usual_month": 8,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-380614,r4455.php?Lang=zh-tw",
+      "links": [
+        "nsysu-learning-assistance"
+      ]
+    },
+    {
+      "id": "nsysu-thai-myanmar",
+      "title": "在臺泰北及緬甸僑生獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "泰北及緬甸來臺、經濟困難的大專僑生，每名 1 萬元",
+      "path": "wiki/scholarships/nsysu-thai-myanmar.md",
+      "organizer": "國立中山大學國際事務處僑外組（公告未載明出資單位）",
+      "audience": "泰北及緬甸地區來臺、經濟困難的大專院校僑生",
+      "amount": "10,000 元",
+      "academic_year": 115,
+      "deadline": "2026-03-27",
+      "usual_month": 3,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-372091,r4455.php?Lang=zh-tw",
+      "links": [
+        "delta-thai-north"
       ]
     },
     {
@@ -179,6 +302,29 @@
       "links": []
     },
     {
+      "id": "sea-medical-talent",
+      "title": "東南亞國家醫藥衛生人才培育獎助學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "讀醫藥衛生科系的東南亞籍大學生，每學期 7.5 萬，最多 4 年",
+      "path": "wiki/scholarships/sea-medical-talent.md",
+      "organizer": "基金會獎學金（送件：嘉基宣教中心；校內由學務處校園組受理）",
+      "audience": "東南亞國籍（泰緬優先）、就讀醫藥衛生相關科系的大學部學生",
+      "amount": "每學期 75,000 元，最多 4 年",
+      "academic_year": 115,
+      "deadline": "2026-08-31",
+      "usual_month": 5,
+      "official_url": "https://sis.nsysu.edu.tw/SIMS/search_view.php?TYPE=1&SP_SNO=11505-622",
+      "links": [
+        "naming-rules",
+        "ocac-outstanding"
+      ]
+    },
+    {
       "id": "after-graduation",
       "title": "畢業後一定要做的三件事",
       "type": "guide",
@@ -198,6 +344,68 @@
         "ocah-thesis-award",
         "residence",
         "work-permit"
+      ]
+    },
+    {
+      "id": "care-support",
+      "title": "生活輔導與傷病慰問",
+      "type": "guide",
+      "tags": [
+        "insurance",
+        "study"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "生病受傷、住院或生活遇到困難時，僑外組可以幫什麼",
+      "path": "wiki/guides/care-support.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-229588.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "clubs",
+        "event-reviews",
+        "host-family",
+        "insurance",
+        "tutoring"
+      ]
+    },
+    {
+      "id": "clubs",
+      "title": "僑生社團（僑聯會、同學會）",
+      "type": "guide",
+      "tags": [
+        "event",
+        "study"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "僑生聯誼會、大馬、印尼、港澳同學會四個社團",
+      "path": "wiki/guides/clubs.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/412-1308-20564.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "care-support",
+        "event-reviews",
+        "events",
+        "nsysu-learning-assistance"
+      ]
+    },
+    {
+      "id": "host-family",
+      "title": "接待家庭（LMMF）",
+      "type": "guide",
+      "tags": [
+        "study"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "學校同仁當接待家庭，逢年過節邀僑生到家裡或出遊",
+      "path": "wiki/guides/host-family.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-229593.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "care-support",
+        "event-reviews",
+        "orientation"
       ]
     },
     {
@@ -275,6 +483,26 @@
       ]
     },
     {
+      "id": "work-in-taiwan",
+      "title": "畢業後留台工作（評點制、工作證）",
+      "type": "guide",
+      "tags": [
+        "work",
+        "graduation"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "畢業後 2 年可自由工作；之後要靠評點制 70 點或專業人才規定",
+      "path": "wiki/guides/work-in-taiwan.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-319408.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "after-graduation",
+        "jobs",
+        "work-permit"
+      ]
+    },
+    {
       "id": "work-permit",
       "title": "工作許可（打工前一定要辦）",
       "type": "guide",
@@ -293,6 +521,23 @@
       ]
     },
     {
+      "id": "event-reviews",
+      "title": "僑生活動回顧總覽",
+      "type": "list",
+      "tags": [
+        "event"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "111–114 學年度活動回顧 50 則，與每年固定舉辦的活動",
+      "path": "wiki/lists/event-reviews.md",
+      "links": [
+        "clubs",
+        "events",
+        "update-event-review"
+      ]
+    },
+    {
       "id": "events",
       "title": "僑生活動總表",
       "type": "list",
@@ -304,7 +549,27 @@
       "summary": "官網「僑生活動資訊」整理，新活動加在最上面",
       "path": "wiki/lists/events.md",
       "links": [
+        "event-reviews",
+        "jobs",
         "naming-rules"
+      ]
+    },
+    {
+      "id": "jobs",
+      "title": "徵才、兼職與實習總表",
+      "type": "list",
+      "tags": [
+        "work"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "官網「徵才 & 工讀」的轉知整理，新資訊加在最上面",
+      "path": "wiki/lists/jobs.md",
+      "links": [
+        "events",
+        "naming-rules",
+        "work-in-taiwan",
+        "work-permit"
       ]
     },
     {
@@ -321,10 +586,18 @@
       "path": "wiki/sop/naming-rules.md",
       "affects": [
         "events",
+        "jobs",
+        "event-reviews",
         "ocac-outstanding",
-        "cantonese-tpe-scholarship"
+        "cantonese-tpe-scholarship",
+        "nsysu-needy-grant",
+        "nsysu-learning-assistance",
+        "sea-medical-talent",
+        "delta-thai-north"
       ],
       "links": [
+        "nsysu-learning-assistance",
+        "nsysu-needy-grant",
         "publish-announcement",
         "update-event-review",
         "verify-external-info"
@@ -343,12 +616,19 @@
       "path": "wiki/sop/publish-announcement.md",
       "affects": [
         "events",
+        "jobs",
         "ocac-outstanding",
         "ocah-scholarship-grant",
         "ocah-shen-memorial",
         "ocah-thesis-award",
         "ocfef-scholarship",
-        "cantonese-tpe-scholarship"
+        "cantonese-tpe-scholarship",
+        "moe-grad-outstanding",
+        "nsysu-needy-grant",
+        "nsysu-learning-assistance",
+        "delta-thai-north",
+        "nsysu-thai-myanmar",
+        "sea-medical-talent"
       ],
       "links": [
         "naming-rules",
@@ -400,7 +680,8 @@
       "summary": "從 FB 挑照片，用「大圖」上傳：大合照→流程照→幹部照",
       "path": "wiki/sop/update-event-review.md",
       "affects": [
-        "events"
+        "events",
+        "event-reviews"
       ],
       "links": [
         "events",

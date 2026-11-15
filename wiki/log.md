@@ -2,6 +2,14 @@
 
 <!-- 新紀錄加在這行下面 -->
 
+## 2026-11-15 ｜ 匯入 ｜ 擴充內容：獎助學金、僑輔指南、活動回顧、徵才
+- 新增獎助學金：[[moe-grad-outstanding]]、[[nsysu-needy-grant]]、[[nsysu-learning-assistance]]、[[delta-thai-north]]、[[nsysu-thai-myanmar]]、[[sea-medical-talent]]
+- 新增僑輔指南：[[work-in-taiwan]]、[[host-family]]、[[care-support]]、[[clubs]]
+- 新增總表：[[event-reviews]]（111–114 學年度 50 則＋每年固定活動表）、[[jobs]]
+- 更新：[[naming-rules]]（新增【助學金申請公告】【扶助金申請公告】）、[[events]]、多個獎學金頁移除「本站最高／最低」等已不成立的比較
+- 結構：CLAUDE.md §2.1 新增主辦單位縮寫 `moe`、`delta` 與「看不出主辦單位時用主題簡稱」規則；§4.1 新增活動回顧、徵才的匯入方式
+- 來源：raw/announcements/2026-03-04 ～ 2026-08-14 共 6 則、2026-11-15-scholarship-list-snapshot.md、2026-11-15-event-review-list-snapshot.md；raw/pages/work-in-taiwan、support-services、clubs
+
 ## 2026-11-15 ｜ SOP ｜ 待確認問題回覆（第 13–17 題），維護手冊全數完成
 - 更新：[[publish-announcement]]（FB 發布後馬上轉發、格式為標題＋重點＋官網連結；新增「再確認截止日」「盡快公布」提醒）、[[verify-external-info]]（不轉發：與僑生無關、非來自學校）、[[update-event-review]]（批量上傳後逐張補說明）
 - 狀態：[[publish-announcement]]、[[naming-rules]]、[[verify-external-info]]、[[update-event-review]] 由 draft 改為 done（管理者同意）
