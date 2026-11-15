@@ -7,7 +7,7 @@ status: done
 updated: 2026-11-15
 sources: [worklog/2026-11-15-3.md, worklog/2026-11-15-4.md, worklog/2026-11-15-5.md, worklog/2026-11-15-6.md, worklog/2026-11-15-8.md]
 summary: 從 FB 挑照片，用「大圖」上傳：大合照→流程照→幹部照
-affects: [events]
+affects: [events, event-reviews]
 ---
 
 ## 什麼時候用

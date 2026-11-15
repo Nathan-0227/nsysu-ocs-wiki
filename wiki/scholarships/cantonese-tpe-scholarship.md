@@ -60,6 +60,6 @@ official_url: https://sis.nsysu.edu.tw/SIMS/search_view.php?TYPE=1&SP_SNO=10112-
 ## 注意事項
 
 - 這是**轉知**的獎學金：送件單位是學務處，問題請找校園組，不是僑外組（見 [[naming-rules]]）。
-- 碩博生也可以申請，是本站少數不限大學部的獎學金。
+- 大學部和碩博生都可以申請。
 
 > 💡 提醒：本頁為非官方整理，申請前請以[官網公告](https://sis.nsysu.edu.tw/SIMS/search_view.php?TYPE=1&SP_SNO=10112-232)為準。

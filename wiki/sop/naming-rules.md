@@ -5,9 +5,9 @@ type: sop
 tags: [naming, cms]
 status: done
 updated: 2026-11-15
-sources: [worklog/2026-11-15.md, worklog/2026-11-15-2.md, worklog/2026-11-15-5.md, worklog/2026-11-15-6.md, worklog/2026-11-15-7.md, worklog/2026-11-15-8.md]
+sources: [announcements/2026-11-15-scholarship-list-snapshot.md, worklog/2026-11-15.md, worklog/2026-11-15-2.md, worklog/2026-11-15-5.md, worklog/2026-11-15-6.md, worklog/2026-11-15-7.md, worklog/2026-11-15-8.md]
 summary: 標題前綴用【類別＋公告／轉知】，年度用民國年
-affects: [events, ocac-outstanding, cantonese-tpe-scholarship]
+affects: [events, jobs, event-reviews, ocac-outstanding, cantonese-tpe-scholarship, nsysu-needy-grant, nsysu-learning-assistance, sea-medical-talent, delta-thai-north]
 ---
 
 ## 什麼時候用
@@ -24,6 +24,8 @@ affects: [events, ocac-outstanding, cantonese-tpe-scholarship]
    |---|---|---|
    | 【獎學金申請公告】 | 由本校（僑外組）發出的獎學金 | 【獎學金申請公告】115年度僑委會傑出及學行優良僑生獎學金 |
    | 【獎學金申請轉知】 | 資訊來自外部（其他大學、基金會、校內其他單位），本專區只是轉發；外部資訊須先 [[verify-external-info\|查證]] | 【獎學金申請轉知】115年台北市廣東同鄉會粵籍大專獎學金 |
+   | 【助學金申請公告】 | 本校發出的助學金（以清寒、生活補助為主） | 【助學金申請公告】115學年度清寒僑生助學金（[[nsysu-needy-grant]]） |
+   | 【扶助金申請公告】 | 本校發出的扶助金（需服務學習） | 【扶助金申請公告】115學年第1學期僑生學習扶助金（[[nsysu-learning-assistance]]） |
    | 【活動公告】 | 本校主辦的活動 | 【活動公告】115年大學僑生、港澳生演講比賽 |
    | 【活動轉知】 | 外部單位的活動 | 【活動轉知】2026年全國僑生盃運動會 |
    | 【活動回顧】 | 活動結束後的照片紀錄（見 [[update-event-review]]） | 【活動回顧】114學年度 僑生新春活動 |
