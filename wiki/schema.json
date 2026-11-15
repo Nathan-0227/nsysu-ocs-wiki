@@ -1,0 +1,32 @@
+{
+  "types": {
+    "scholarship": { "label": "獎學金", "dir": "scholarships", "required": ["organizer", "audience", "amount", "academic_year", "deadline", "usual_month", "official_url"] },
+    "guide":       { "label": "僑輔指南", "dir": "guides", "required": ["official_url", "checked"] },
+    "list":        { "label": "總表", "dir": "lists", "required": [] },
+    "sop":         { "label": "維護手冊", "dir": "sop", "required": ["affects"] },
+    "meta":        { "label": "說明", "dir": "meta", "required": [] }
+  },
+  "common_required": ["id", "title", "type", "tags", "status", "updated", "sources", "summary"],
+  "statuses": ["done", "stub", "draft"],
+  "tags": {
+    "scholarship": "獎助學金",
+    "residence": "居留、入出境",
+    "insurance": "保險、健保",
+    "work": "工讀、工作許可、就業",
+    "study": "課業、入學",
+    "graduation": "畢業相關",
+    "event": "活動",
+    "cms": "官網後台操作",
+    "naming": "命名規則",
+    "verify": "資訊查證",
+    "site": "本站相關"
+  },
+  "organizers": {
+    "ocac": "僑務委員會",
+    "ocah": "華僑協會總會",
+    "ocfef": "僑聯文教基金會",
+    "cantonese-tpe": "台北市廣東同鄉會",
+    "nsysu": "國立中山大學"
+  },
+  "forbidden_patterns": ["密碼", "password", "帳號：", "帳號:", "login", "/admin", "後台網址", "學姊", "學姐"]
+}

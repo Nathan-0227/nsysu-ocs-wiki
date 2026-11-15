@@ -1,0 +1,448 @@
+{
+  "generated_by": "scripts/build_index.py",
+  "page_count": 19,
+  "last_updated": "2026-11-15",
+  "types": {
+    "scholarship": "獎學金",
+    "guide": "僑輔指南",
+    "list": "總表",
+    "sop": "維護手冊",
+    "meta": "說明"
+  },
+  "tags": {
+    "scholarship": "獎助學金",
+    "residence": "居留、入出境",
+    "insurance": "保險、健保",
+    "work": "工讀、工作許可、就業",
+    "study": "課業、入學",
+    "graduation": "畢業相關",
+    "event": "活動",
+    "cms": "官網後台操作",
+    "naming": "命名規則",
+    "verify": "資訊查證",
+    "site": "本站相關"
+  },
+  "log_links": [
+    "about",
+    "after-graduation",
+    "cantonese-tpe-scholarship",
+    "events",
+    "insurance",
+    "naming-rules",
+    "ocac-outstanding",
+    "ocah-scholarship-grant",
+    "ocah-shen-memorial",
+    "ocah-thesis-award",
+    "ocfef-scholarship",
+    "orientation",
+    "publish-announcement",
+    "residence",
+    "sync-to-wiki",
+    "tutoring",
+    "update-event-review",
+    "verify-external-info",
+    "work-permit"
+  ],
+  "pages": [
+    {
+      "id": "cantonese-tpe-scholarship",
+      "title": "台北市廣東同鄉會粵籍大專獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "粵籍（含廣州、海南）大學部及碩博生，8,000 至 20,000 元",
+      "path": "wiki/scholarships/cantonese-tpe-scholarship.md",
+      "organizer": "台北市廣東同鄉會（校內由學生事務處校園組受理）",
+      "audience": "粵籍（含廣州市及海南）大學部、碩士班、博士班學生",
+      "amount": "8,000–20,000 元",
+      "academic_year": 115,
+      "deadline": "2026-10-24",
+      "usual_month": 8,
+      "official_url": "https://sis.nsysu.edu.tw/SIMS/search_view.php?TYPE=1&SP_SNO=10112-232",
+      "links": [
+        "naming-rules"
+      ]
+    },
+    {
+      "id": "ocac-outstanding",
+      "title": "僑委會傑出及學行優良僑生獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "大學部二年級以上僑生，傑出 2 萬元、學行優良 6 千元",
+      "path": "wiki/scholarships/ocac-outstanding.md",
+      "organizer": "僑務委員會（校內由國際事務處僑外組受理）",
+      "audience": "大學部二年級以上僑生（不含碩博生、延畢生）",
+      "amount": "傑出 20,000 元／學行優良 6,000 元",
+      "academic_year": 115,
+      "deadline": "2026-09-21",
+      "usual_month": 9,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-381693,r4455.php?Lang=zh-tw",
+      "links": [
+        "ocah-scholarship-grant",
+        "ocah-shen-memorial"
+      ]
+    },
+    {
+      "id": "ocah-scholarship-grant",
+      "title": "華僑協會總會僑生獎學金暨助學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "大二至大四僑生，獎學金 2 萬元、助學金 1 萬元",
+      "path": "wiki/scholarships/ocah-scholarship-grant.md",
+      "organizer": "華僑協會總會（校內由國際事務處僑外組受理）",
+      "audience": "大學部二年級至四年級僑生",
+      "amount": "獎學金 20,000 元／助學金 10,000 元",
+      "academic_year": 115,
+      "deadline": "2026-09-21",
+      "usual_month": 9,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-381727,r4455.php?Lang=zh-tw",
+      "links": [
+        "ocac-outstanding",
+        "ocah-shen-memorial"
+      ]
+    },
+    {
+      "id": "ocah-shen-memorial",
+      "title": "華僑協會總會沈昌煥暨沈黎蘭夫婦紀念獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "大二至大四、成績 90 分以上或有特殊技能，36,000 元",
+      "path": "wiki/scholarships/ocah-shen-memorial.md",
+      "organizer": "華僑協會總會（校內由國際事務處僑外組受理）",
+      "audience": "大學部二年級至四年級僑生",
+      "amount": "36,000 元",
+      "academic_year": 115,
+      "deadline": "2026-09-21",
+      "usual_month": 9,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-381739,r4455.php?Lang=zh-tw",
+      "links": [
+        "ocah-scholarship-grant"
+      ]
+    },
+    {
+      "id": "ocah-thesis-award",
+      "title": "華僑協會總會獎勵研究華僑華人事務博碩士論文",
+      "type": "scholarship",
+      "tags": [
+        "scholarship",
+        "graduation"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "研究華僑華人事務的博碩士論文，最高 3 萬至 5 萬元",
+      "path": "wiki/scholarships/ocah-thesis-award.md",
+      "organizer": "華僑協會總會",
+      "audience": "兩年內取得學位、論文主題為華僑華人事務的碩博士",
+      "amount": "博士最高 50,000 元／碩士最高 30,000 元",
+      "academic_year": 115,
+      "deadline": "2026-09-30",
+      "usual_month": 9,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-382430,r4455.php?Lang=zh-tw",
+      "links": [
+        "after-graduation",
+        "ocah-scholarship-grant"
+      ]
+    },
+    {
+      "id": "ocfef-scholarship",
+      "title": "僑聯文教基金會僑生獎學金",
+      "type": "scholarship",
+      "tags": [
+        "scholarship"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "大二以上僑生、成績 75 分以上，清寒優先，5,000 元",
+      "path": "wiki/scholarships/ocfef-scholarship.md",
+      "organizer": "僑聯文教基金會",
+      "audience": "大學部二年級以上僑生（不含碩博生）",
+      "amount": "5,000 元",
+      "academic_year": 115,
+      "deadline": "2026-10-15",
+      "usual_month": 9,
+      "official_url": "https://oia.nsysu.edu.tw/p/406-1308-383214,r4455.php?Lang=zh-tw",
+      "links": []
+    },
+    {
+      "id": "after-graduation",
+      "title": "畢業後一定要做的三件事",
+      "type": "guide",
+      "tags": [
+        "graduation",
+        "residence",
+        "insurance"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "拿到畢業證書 15 天內延期居留、兩週內更新地址、9 月起自己加健保",
+      "path": "wiki/guides/after-graduation.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-318471.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "insurance",
+        "ocah-thesis-award",
+        "residence",
+        "work-permit"
+      ]
+    },
+    {
+      "id": "insurance",
+      "title": "保險（僑保、健保、團保）",
+      "type": "guide",
+      "tags": [
+        "insurance"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "居留滿 183 天前用僑保，之後加入健保，不符資格的用團保",
+      "path": "wiki/guides/insurance.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-325246.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "after-graduation",
+        "residence"
+      ]
+    },
+    {
+      "id": "orientation",
+      "title": "新生入學輔導",
+      "type": "guide",
+      "tags": [
+        "study"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "開學前協助接機住宿，註冊前有一天半的新生講習",
+      "path": "wiki/guides/orientation.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-229584.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "insurance",
+        "residence",
+        "tutoring"
+      ]
+    },
+    {
+      "id": "residence",
+      "title": "居留證與入出境",
+      "type": "guide",
+      "tags": [
+        "residence"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "入境後 30 天內辦居留證、到期前 3 個月可延期，逾期最高罰 5 萬",
+      "path": "wiki/guides/residence.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-325587.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "after-graduation",
+        "insurance",
+        "orientation",
+        "work-permit"
+      ]
+    },
+    {
+      "id": "tutoring",
+      "title": "課業輔導與暑修",
+      "type": "guide",
+      "tags": [
+        "study"
+      ],
+      "status": "stub",
+      "updated": "2026-11-15",
+      "summary": "僑外組開設基本學科輔導課，並協助辦理暑修",
+      "path": "wiki/guides/tutoring.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-229589.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "orientation"
+      ]
+    },
+    {
+      "id": "work-permit",
+      "title": "工作許可（打工前一定要辦）",
+      "type": "guide",
+      "tags": [
+        "work"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "校內外打工都要先辦，每週最多 20 小時，沒辦最高罰 15 萬",
+      "path": "wiki/guides/work-permit.md",
+      "official_url": "https://oia.nsysu.edu.tw/p/404-1308-229594.php?Lang=zh-tw",
+      "checked": "2026-11-15",
+      "links": [
+        "after-graduation",
+        "residence"
+      ]
+    },
+    {
+      "id": "events",
+      "title": "僑生活動總表",
+      "type": "list",
+      "tags": [
+        "event"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "官網「僑生活動資訊」整理，新活動加在最上面",
+      "path": "wiki/lists/events.md",
+      "links": [
+        "naming-rules"
+      ]
+    },
+    {
+      "id": "naming-rules",
+      "title": "SOP：公告標題命名規則",
+      "type": "sop",
+      "tags": [
+        "naming",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "標題前綴用【類別＋公告／轉知】，年度用民國年",
+      "path": "wiki/sop/naming-rules.md",
+      "affects": [
+        "events",
+        "ocac-outstanding",
+        "cantonese-tpe-scholarship"
+      ],
+      "links": [
+        "publish-announcement",
+        "update-event-review",
+        "verify-external-info"
+      ]
+    },
+    {
+      "id": "publish-announcement",
+      "title": "SOP：在官網發布一則公告",
+      "type": "sop",
+      "tags": [
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "從收到資訊、討論、後台新增、排版到轉發 FB 的完整流程",
+      "path": "wiki/sop/publish-announcement.md",
+      "affects": [
+        "events",
+        "ocac-outstanding",
+        "ocah-scholarship-grant",
+        "ocah-shen-memorial",
+        "ocah-thesis-award",
+        "ocfef-scholarship",
+        "cantonese-tpe-scholarship"
+      ],
+      "links": [
+        "naming-rules",
+        "ocah-scholarship-grant",
+        "sync-to-wiki",
+        "update-event-review",
+        "verify-external-info"
+      ]
+    },
+    {
+      "id": "sync-to-wiki",
+      "title": "SOP：官網發布後同步到本站",
+      "type": "sop",
+      "tags": [
+        "site",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "官網發布後，把公告交給 AI 依 CLAUDE.md 更新本站",
+      "path": "wiki/sop/sync-to-wiki.md",
+      "affects": [
+        "events",
+        "ocac-outstanding",
+        "ocah-scholarship-grant",
+        "ocah-shen-memorial",
+        "ocah-thesis-award",
+        "ocfef-scholarship",
+        "cantonese-tpe-scholarship",
+        "work-permit",
+        "residence",
+        "insurance",
+        "after-graduation"
+      ],
+      "links": [
+        "publish-announcement"
+      ]
+    },
+    {
+      "id": "update-event-review",
+      "title": "SOP：更新僑生活動回顧",
+      "type": "sop",
+      "tags": [
+        "event",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "從 FB 挑照片，用「大圖」上傳：大合照→流程照→幹部照",
+      "path": "wiki/sop/update-event-review.md",
+      "affects": [
+        "events"
+      ],
+      "links": [
+        "events",
+        "naming-rules",
+        "publish-announcement"
+      ]
+    },
+    {
+      "id": "verify-external-info",
+      "title": "SOP：轉發外部資訊前的查證",
+      "type": "sop",
+      "tags": [
+        "verify",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "從其他大學或單位找到的資訊，轉發前確認來源與期限",
+      "path": "wiki/sop/verify-external-info.md",
+      "affects": [
+        "events",
+        "cantonese-tpe-scholarship"
+      ],
+      "links": [
+        "naming-rules",
+        "publish-announcement"
+      ]
+    },
+    {
+      "id": "about",
+      "title": "關於本站",
+      "type": "meta",
+      "tags": [
+        "site"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "本站是什麼、資料從哪來、怎麼一直更新",
+      "path": "wiki/meta/about.md",
+      "links": [
+        "sync-to-wiki"
+      ]
+    }
+  ]
+}
