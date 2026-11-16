@@ -51,6 +51,8 @@ def main():
             if k not in m or m[k] in ("", None):
                 err(p, f"type={t} 缺少必填欄位 `{k}`")
 
+        if t == "handbook" and m.get("section") not in schema["sections"]:
+            err(p, f"section 只能是 {schema['sections']}")
         if m.get("status") not in schema["statuses"]:
             err(p, f"status 只能是 {schema['statuses']}")
         tags = m.get("tags") or []

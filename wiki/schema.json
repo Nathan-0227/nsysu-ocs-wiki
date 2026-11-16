@@ -1,5 +1,12 @@
 {
   "types": {
+    "handbook": {
+      "label": "管理手冊",
+      "dir": "handbook",
+      "required": [
+        "section"
+      ]
+    },
     "scholarship": {
       "label": "獎學金",
       "dir": "scholarships",
@@ -27,7 +34,7 @@
       "required": []
     },
     "sop": {
-      "label": "維護手冊",
+      "label": "任務 SOP",
       "dir": "sop",
       "required": [
         "affects"
@@ -65,7 +72,10 @@
     "cms": "官網後台操作",
     "naming": "命名規則",
     "verify": "資訊查證",
-    "site": "本站相關"
+    "site": "本站相關",
+    "rpage": "Rpage 後台功能",
+    "handover": "交接傳承",
+    "routine": "例行工作"
   },
   "organizers": {
     "ocac": "僑務委員會",
@@ -86,5 +96,11 @@
     "後台網址",
     "學姊",
     "學姐"
+  ],
+  "sections": [
+    "新手上路",
+    "例行工作",
+    "Rpage 功能",
+    "名詞解釋"
   ]
 }

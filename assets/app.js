@@ -58,9 +58,10 @@
     </a>`;
   }
   function plainCard(p) {
-    const isSop = p.type === "sop";
-    return `<a class="card ${isSop ? "card-sop" : ""}" href="${link(p.id)}">
-      <span class="badge ${isSop ? "b-sop" : "b-type"}">${esc(M.types[p.type])}</span> ${statusBadge(p)}
+    const isSop = p.type === "sop", isHb = p.type === "handbook";
+    const label = isHb ? p.section : M.types[p.type];
+    return `<a class="card ${isSop ? "card-sop" : ""} ${isHb ? "card-hb" : ""}" href="${link(p.id)}">
+      <span class="badge ${isSop ? "b-sop" : isHb ? "b-hb" : "b-type"}">${esc(label)}</span> ${statusBadge(p)}
       <h3>${esc(p.title)}</h3>
       <p>${esc(p.summary)}</p>
       <div class="meta"><span>更新 ${esc(p.updated)}</span>${p.checked ? `<span>官網核對 ${esc(p.checked)}</span>` : ""}</div>
@@ -72,47 +73,57 @@
   // ---------- 首頁 ----------
   async function home() {
     const sch = sortScholarships(ofType("scholarship"));
-    const openCount = sch.filter(p => deadlineState(p).rank < 1000).length;
+    const hb = ofType("handbook");
+    const ORDER = ["handover-guide", "routine-tasks", "glossary", "rpage-info-management", "rpage-modules", "rpage-page-management", "rpage-documents"];
+    const rank = p => (ORDER.indexOf(p.id) + 1) || 99;
+    const bySection = s => hb.filter(p => p.section === s).sort((x, y) => rank(x) - rank(y));
+    const bCount = hb.length + ofType("sop").length;
+    const aCount = M.page_count - bCount - ofType("meta").length;
     const logHtml = await recentLog(2);
     app.innerHTML = `
       <section class="hero">
         <div>
-          <h1>僑生要找的資訊，<br>一個主題一頁。</h1>
-          <p>把中山大學國際事務處的僑生公告，整理成好查的獎學金、居留、工作許可與保險資料。</p>
+          <h1>接手僑生專區網站，<br>從這本手冊開始。</h1>
+          <p>中山大學國際事務處僑生專區（Rpage）的網站管理傳承手冊：交接指南、例行工作、後台功能與任務 SOP，隨著每一次工作持續更新。</p>
         </div>
         <div class="stats">
-          <div class="stat"><b>${openCount}</b><span>開放中獎學金</span></div>
-          <div class="stat"><b>${M.page_count}</b><span>頁資料</span></div>
+          <div class="stat"><b>${bCount}</b><span>頁管理手冊與 SOP</span></div>
+          <div class="stat"><b>${aCount}</b><span>頁成果範例</span></div>
           <div class="stat"><b>${esc(M.last_updated.slice(5))}</b><span>最後更新</span></div>
         </div>
       </section>
-      <div class="notice">⚠️ 本站為<strong>非官方整理</strong>，金額、資格與截止日請以每頁附的官網公告為準。</div>
+      <div class="philosophy"><b>前任管理者的叮嚀：</b>網頁管理是沒有盡頭的優化。一切以<strong>使用者體驗</strong>為出發點，因為這些資訊存在的目的，就是讓僑生同學看得到、看得懂。</div>
 
-      <section class="section">
-        <div class="section-head"><h2>獎學金</h2><a href="#/list/scholarship" class="sub">全部 ${sch.length} 項 →</a></div>
-        ${openCount === 0 ? `<p class="sub" style="color:var(--muted);margin-top:-6px">目前沒有開放中的獎學金。下方依「預計下次公告」排序，提早準備成績單和證明文件。</p>` : ""}
-        <div class="grid">${sch.slice(0, 6).map(scholarshipCard).join("")}</div>
-      </section>
-
-      <section class="section">
-        <div class="section-head"><h2>僑輔指南</h2><a href="#/list/guide" class="sub">全部 →</a></div>
-        <div class="grid">${ofType("guide").map(plainCard).join("")}</div>
-      </section>
-
-      <section class="section">
-        <div class="section-head"><h2>活動與徵才總表</h2></div>
-        <div class="grid">${ofType("list").map(plainCard).join("")}</div>
+      <section class="section section-b">
+        <div class="section-head"><h2>新手上路</h2><a href="#/list/handbook" class="sub">全部手冊 →</a></div>
+        <div class="grid">${[...bySection("新手上路"), ...bySection("例行工作"), ...bySection("名詞解釋")].map(plainCard).join("")}</div>
       </section>
 
       <section class="section section-b">
-        <div class="section-head"><h2>官網維護手冊</h2><span class="sub">給管理者與接手的人</span></div>
+        <div class="section-head"><h2>Rpage 功能地圖</h2><span class="sub">後台四大功能，各一頁</span></div>
+        <div class="grid">${bySection("Rpage 功能").map(plainCard).join("")}</div>
+      </section>
+
+      <section class="section section-b">
+        <div class="section-head"><h2>任務 SOP</h2><a href="#/list/sop" class="sub">全部 →</a></div>
         <div class="flow" style="margin-bottom:14px">
-          <span>學校發新公告</span><i>→</i><span>照 SOP 在官網發布</span><i>→</i><span>原文存進 raw/</span><i>→</i><span>AI 依 CLAUDE.md 更新本站</span>
+          <span>學校發新公告</span><i>→</i><span>照 SOP 在 Rpage 發布</span><i>→</i><span>原文存進 raw/</span><i>→</i><span>AI 依 CLAUDE.md 更新本站</span>
         </div>
         <div class="grid">${ofType("sop").map(plainCard).join("")}</div>
       </section>
 
-      <section class="section">
+      <section class="section section-a">
+        <div class="section-head"><h2>成果範例：僑生資訊</h2><span class="sub">依本手冊維護出來的內容</span></div>
+        <p style="color:var(--muted);margin-top:-6px">把官網「依日期排列的公告」整理成一個主題一頁。⚠️ 非官方整理，請以每頁附的官網公告為準。</p>
+        <div class="grid">${sch.slice(0, 3).map(scholarshipCard).join("")}</div>
+        <div class="mini-links">
+          <a href="#/list/scholarship">全部 ${sch.length} 個獎助學金 →</a>
+          <a href="#/list/guide">${ofType("guide").length} 篇僑輔指南 →</a>
+          ${ofType("list").map(p => `<a href="${link(p.id)}">${esc(p.title)} →</a>`).join("")}
+        </div>
+      </section>
+
+      <section class="section" style="margin-top:40px">
         <div class="section-head"><h2>最近更新</h2><a href="#/log" class="sub">完整紀錄 →</a></div>
         <div class="article">${logHtml}</div>
       </section>`;
@@ -144,14 +155,15 @@
   // ---------- 列表頁 ----------
   function list(type) {
     const all = type === "scholarship" ? sortScholarships(ofType(type)) : ofType(type);
-    const titles = { scholarship: "獎學金", guide: "僑輔指南", sop: "官網維護手冊" };
+    const titles = { scholarship: "獎學金", guide: "僑輔指南", sop: "任務 SOP", handbook: "管理手冊" };
     const notes = {
       scholarship: "依截止狀態排序：開放中 → 已截止（依預計下次公告時間）。",
       guide: "每頁都標示「官網核對日期」，超過半年未核對的頁面會在健檢時被提醒。",
-      sop: "記錄在官網後台發布公告的步驟。標示「草稿」的 SOP 還需要管理者確認細節。",
+      sop: "在 Rpage 後台完成各項任務的步驟、檢查清單與常見錯誤。",
+      handbook: "交接指南、例行工作、名詞解釋與 Rpage 後台功能說明。",
     };
     app.innerHTML = `
-      <div class="section ${type === "sop" ? "section-b" : ""}">
+      <div class="section ${type === "sop" || type === "handbook" ? "section-b" : ""}">
         <div class="section-head"><h2>${titles[type]}</h2><span class="sub">${all.length} 頁</span></div>
         <p style="color:var(--muted);margin-top:-6px">${notes[type]}</p>
         ${type === "scholarship" ? timeline(all) : ""}
@@ -160,7 +172,7 @@
       </div>`;
     const draw = q => {
       const ql = q.trim().toLowerCase();
-      const items = all.filter(p => !ql || [p.title, p.summary, p.audience, p.organizer].join(" ").toLowerCase().includes(ql));
+      const items = all.filter(p => !ql || [p.title, p.summary, p.audience, p.organizer, p.section].join(" ").toLowerCase().includes(ql));
       document.getElementById("items").innerHTML =
         items.map(type === "scholarship" ? scholarshipCard : plainCard).join("") || `<p>找不到符合的頁面。</p>`;
     };
@@ -198,8 +210,8 @@
 
     app.innerHTML = `
       <div class="article-layout">
-        <article class="article ${isSop ? "is-sop" : ""}">
-          <span class="badge ${isSop ? "b-sop" : "b-type"}">${esc(M.types[p.type])}</span> ${statusBadge(p)}
+        <article class="article ${isSop || p.type === "handbook" ? "is-sop" : ""}">
+          <span class="badge ${isSop ? "b-sop" : p.type === "handbook" ? "b-hb" : "b-type"}">${esc(p.type === "handbook" ? "管理手冊・" + p.section : M.types[p.type])}</span> ${statusBadge(p)}
           <h1>${esc(p.title)}</h1>
           <p class="lead">${esc(p.summary)}</p>
           ${facts}

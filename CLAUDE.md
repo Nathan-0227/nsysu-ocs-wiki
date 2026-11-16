@@ -1,4 +1,4 @@
-# CLAUDE.md — 中山僑生資訊知識庫（員工手冊）
+# CLAUDE.md — 僑生專區 Rpage 網站管理傳承手冊（員工手冊）
 
 > 每次開始工作前，先完整讀完這份文件。不確定的地方，**先問，不要猜**。
 > 本文件依「好老闆要說清楚三件事」撰寫：**要什麼成品（§2）→ 有什麼限制（§3）→ 怎麼算做完（§5）**。
@@ -7,21 +7,27 @@
 
 ## 0. 這個專案是什麼
 
-這是一個**非官方的僑生資訊知識庫**，資料來源是國立中山大學國際事務處「僑生學位生」專區（以下稱「官網」）。
+這是國立中山大學國際事務處「僑生學位生」專區（以下稱「官網」，平台為 **Rpage**）的**網站管理傳承手冊**。
 
-本專案有兩個部分，服務兩種讀者：
+**目的：讓下一任網站管理者接手時，不用從零摸索。** 前任管理者的經驗、後台操作、例行工作與遇過的問題，都整理在這裡，並且隨著工作持續更新。
 
-| 部分 | 給誰看 | 解決什麼問題 |
+**管理理念**（寫手冊、改網站時都要以此為準）：網頁管理是沒有盡頭的優化；一切以**使用者（僑生同學）的體驗**為出發點。
+
+本專案有兩個部分：
+
+| 部分 | 給誰看 | 內容 |
 |---|---|---|
-| **A. 僑生資訊**（獎學金、僑輔指南、活動） | 在校僑生 | 官網是「依日期排列的公告清單」，很難看出哪些獎學金還能申請、截止日是哪天。本站把公告整理成**一個主題一頁**的資料。 |
-| **B. 維護手冊**（SOP） | 官網管理者（我）和下一位接手的人 | 把在官網後台發布公告的步驟、命名規則寫下來，讓工作可以交接。 |
+| **B. 管理手冊（主體）** | 官網管理者與接手的人 | 交接指南、例行工作、名詞解釋、Rpage 功能說明（`handbook/`），以及任務 SOP（`sop/`） |
+| **A. 僑生資訊（成果範例）** | 在校僑生 | 依手冊維護出來的成果：獎學金、僑輔指南、活動與徵才總表，把官網「依日期排列的公告」整理成**一個主題一頁** |
 
 兩個部分用同一個流程串起來：
 
 ```
 學校發新公告
-  ├─ B：管理者照 SOP 在官網後台發布
+  ├─ B：管理者照 SOP 在官網（Rpage）發布
   └─ A：把公告整理進 raw/ → AI 依本手冊更新 wiki/ → 網站自動更新
+管理者學到新東西、遇到新問題
+  └─ B：寫進 raw/worklog/ → AI 依 §4.3 更新管理手冊
 ```
 
 **核心原則：資料和網頁分開。** 更新內容只動 `raw/` 和 `wiki/`，永遠不需要改 HTML。
@@ -40,21 +46,24 @@
 ├── raw/                     ← 原始資料（只能新增，不能修改或刪除）
 │   ├── announcements/       ← 官網公告（獎學金、活動、工讀……）
 │   ├── pages/               ← 官網常設頁面（僑輔項目、法令……）
-│   └── worklog/             ← 管理者的工作紀錄（B 的資料來源）
+│   ├── pages/rpage-*        ← Rpage 公開操作文件摘要（外部參考）
+│   └── worklog/             ← 管理者的工作紀錄（B 的主要資料來源）
 ├── wiki/
-│   ├── schema.json          ← 允許的頁面類型、欄位、標籤、禁止字詞
+│   ├── schema.json          ← 允許的頁面類型、欄位、標籤、手冊章節、禁止字詞
+│   ├── handbook/            ← B：管理手冊（交接指南、例行工作、名詞解釋、Rpage 功能）
 │   ├── scholarships/        ← A：獎學金頁（一個獎學金一頁，跨年度更新）
 │   ├── guides/              ← A：僑輔指南頁（一個主題一頁）
 │   ├── lists/               ← A：總表（events 活動、event-reviews 活動回顧、jobs 徵才；新資料加在最上面）
-│   ├── sop/                 ← B：維護手冊頁（一個作業一頁）
+│   ├── sop/                 ← B：任務 SOP（一個作業一頁）
 │   ├── meta/                ← 關於本站
 │   ├── log.md               ← 更新紀錄（只在最上方新增）
 │   ├── index.md             ← 自動產生，勿手動編輯
 │   └── manifest.json        ← 自動產生，勿手動編輯（網站靠它運作）
-├── templates/               ← scholarship.md / guide.md / sop.md 模板
+├── templates/               ← handbook.md / sop.md / scholarship.md / guide.md 模板
 └── scripts/
     ├── build_index.py       ← 掃描 wiki/ → 產生 index.md 與 manifest.json
-    └── lint.py              ← 健檢：欄位、日期、連結、來源、禁止字詞
+    ├── lint.py              ← 健檢：欄位、日期、連結、來源、禁止字詞
+    └── check_links.py       ← 檢查所有官網連結是否還打得開（每學期例行工作，需要網路）
 ```
 
 ---
@@ -73,6 +82,7 @@
 | 獎學金頁 | `wiki/scholarships/主辦單位縮寫-簡稱.md`（**不含年度**） | `wiki/scholarships/ocac-outstanding.md` |
 | 僑輔指南 | `wiki/guides/主題.md` | `wiki/guides/work-permit.md` |
 | SOP | `wiki/sop/動作-對象.md` | `wiki/sop/publish-announcement.md` |
+| 管理手冊 | `wiki/handbook/主題.md`；Rpage 功能頁一律以 `rpage-` 開頭 | `wiki/handbook/rpage-modules.md` |
 
 `類別` 只能用：`scholarship`、`event`、`job`、`news`、`regulation`。
 
@@ -86,7 +96,7 @@
 ---
 id: work-permit               # = 檔名
 title: 僑生工作許可            # 中文標題
-type: guide                   # scholarship / guide / list / sop / meta
+type: guide                   # handbook / sop / scholarship / guide / list / meta
 tags: [work]                  # 1–3 個，只能用 schema.json 的 tags
 status: done                  # done（完成）/ stub（待補）/ draft（草稿，SOP 待管理者確認）
 updated: 2026-11-15           # 最後修改日 YYYY-MM-DD，每次修改都要改
@@ -106,12 +116,14 @@ summary: 一句話（30 字以內）
 | | `deadline` | 最新一次的截止日，**西元** YYYY-MM-DD |
 | | `usual_month` | 通常每年幾月公告（數字），讓網站在截止後顯示「預計明年 X 月公告」 |
 | | `official_url` | 最新一則官網公告網址 |
+| `handbook` | `section` | 手冊章節，只能用 `schema.json` 的 `sections`：新手上路、例行工作、Rpage 功能、名詞解釋 |
 | `guide` | `official_url` | 官網對應頁面網址 |
 | | `checked` | 最後一次到官網核對內容的日期 |
 | `sop` | `affects` | 這個 SOP 會影響哪些 A 頁面的 id（可為空 `[]`） |
 
 ### 2.3 內文段落（照模板，順序固定）
 
+- **管理手冊**（`templates/handbook.md`）：`一句話重點` → `這是什麼` → `在僑生專區怎麼用` → `注意事項` → `相關頁面` → `待確認`（交接指南、例行工作、名詞解釋可依內容調整小節，但第一段一定是 `一句話重點`）
 - **獎學金**（`templates/scholarship.md`）：`重點一覽`（表格）→ `申請資格` → `應備文件` → `申請方式` → `歷年紀錄` → `注意事項`
 - **僑輔指南**（`templates/guide.md`）：`一句話重點` → `詳細說明` → `常見問題` → `相關頁面`
 - **SOP**（`templates/sop.md`）：`什麼時候用` → `步驟` → `檢查清單` → `常見錯誤` → `待確認`
@@ -168,15 +180,28 @@ summary: 一句話（30 字以內）
 9. 回報變更清單。
 
 ### 4.2 核對官網常設頁面（每學期一次，或使用者要求時）
-1. 重新擷取官網頁面，存成新的 `raw/pages/簡稱-YYYY-MM-DD.md`（舊檔保留）。
-2. 和 guide 頁比對；有差異就更新內容，沒差異也要更新 `checked`。
-3. build → lint → log（動作類別「核對」）。
+1. 執行 `python3 scripts/check_links.py`，列出打不開的連結，回報給使用者。
+2. 重新擷取官網頁面，存成新的 `raw/pages/簡稱-YYYY-MM-DD.md`（舊檔保留）。
+3. 和 guide 頁比對；有差異就更新內容，沒差異也要更新 `checked`。
+4. build → lint → log（動作類別「核對」）。
+5. 對應的人工作業清單見 `wiki/handbook/routine-tasks.md`。
 
-### 4.3 整理工作紀錄（B）
-使用者在 `raw/worklog/` 新增工作紀錄時：
-1. 找出紀錄中提到的作業，對應到既有 SOP；沒有對應的 → 提議新增 SOP（先問）。
-2. 紀錄中的新步驟、遇到的錯誤 → 補進 SOP 的「步驟」或「常見錯誤」。
-3. SOP 由 `draft` 改為 `done` **只能由使用者決定**。
+### 4.3 整理工作紀錄，更新管理手冊（B）
+使用者口述經驗、提供後台截圖，或在 `raw/worklog/` 新增工作紀錄時：
+1. 先把口述內容存成新的 `raw/worklog/YYYY-MM-DD(-N).md`（截圖只記下欄位名稱和步驟，**截圖本身不放進專案**）。
+2. 判斷內容屬於哪一類，更新對應頁面；沒有對應頁面 → 提議新增（先問）：
+
+   | 內容 | 更新到 |
+   |---|---|
+   | 某個作業的步驟、遇到的錯誤 | `sop/` 的「步驟」或「常見錯誤」 |
+   | Rpage 某個功能怎麼用 | `handbook/rpage-*.md` |
+   | 新的後台或專區用語 | `handbook/glossary.md` 的表格 |
+   | 固定時間要做的事 | `handbook/routine-tasks.md` |
+   | 管理理念、給下一任的提醒 | `handbook/handover-guide.md` |
+
+3. 使用者回答了某頁「待確認」裡的問題 → 寫進內文，並從「待確認」刪掉那一條。
+4. SOP 由 `draft` 改為 `done` **只能由使用者決定**。
+5. build → lint → log（動作類別 `SOP` 或 `手冊`）。
 
 ### 4.4 問答
 優先根據 wiki 回答並列出頁面 id；答案涉及截止日或金額時，一定附上 `official_url`，並提醒「以官網公告為準」。
@@ -193,7 +218,7 @@ summary: 一句話（30 字以內）
 - 更新：[[events]]（新增 1 筆活動）
 - 來源：raw/announcements/2026-09-07-scholarship-ocac-outstanding.md
 ```
-動作類別只能用：`匯入`、`更新`、`核對`、`修正`、`SOP`、`結構`。
+動作類別只能用：`匯入`、`更新`、`核對`、`修正`、`SOP`、`手冊`、`結構`。
 
 ---
 
@@ -221,4 +246,7 @@ summary: 一句話（30 字以內）
 ```
 ```
 請先讀 CLAUDE.md，幫我做一次健檢（4.5）。
+```
+```
+請先讀 CLAUDE.md。我今天學會用 Rpage 的頁籤模組做首頁分頁，步驟是……，請依 4.3 更新管理手冊。
 ```

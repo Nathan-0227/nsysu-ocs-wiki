@@ -1,12 +1,13 @@
 {
   "generated_by": "scripts/build_index.py",
-  "page_count": 31,
+  "page_count": 38,
   "last_updated": "2026-11-15",
   "types": {
+    "handbook": "管理手冊",
     "scholarship": "獎學金",
     "guide": "僑輔指南",
     "list": "總表",
-    "sop": "維護手冊",
+    "sop": "任務 SOP",
     "meta": "說明"
   },
   "tags": {
@@ -20,7 +21,10 @@
     "cms": "官網後台操作",
     "naming": "命名規則",
     "verify": "資訊查證",
-    "site": "本站相關"
+    "site": "本站相關",
+    "rpage": "Rpage 後台功能",
+    "handover": "交接傳承",
+    "routine": "例行工作"
   },
   "log_links": [
     "about",
@@ -31,6 +35,8 @@
     "delta-thai-north",
     "event-reviews",
     "events",
+    "glossary",
+    "handover-guide",
     "host-family",
     "insurance",
     "jobs",
@@ -47,6 +53,11 @@
     "orientation",
     "publish-announcement",
     "residence",
+    "routine-tasks",
+    "rpage-documents",
+    "rpage-info-management",
+    "rpage-modules",
+    "rpage-page-management",
     "sea-medical-talent",
     "sync-to-wiki",
     "tutoring",
@@ -56,6 +67,175 @@
     "work-permit"
   ],
   "pages": [
+    {
+      "id": "glossary",
+      "title": "名詞解釋：Rpage 與僑生專區用語",
+      "type": "handbook",
+      "tags": [
+        "rpage",
+        "handover"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "資訊、分類、模組、個別頁面、大圖、轉知……一次看懂",
+      "path": "wiki/handbook/glossary.md",
+      "section": "名詞解釋",
+      "links": [
+        "naming-rules",
+        "publish-announcement",
+        "rpage-documents",
+        "rpage-info-management",
+        "rpage-modules",
+        "rpage-page-management",
+        "update-event-review"
+      ]
+    },
+    {
+      "id": "handover-guide",
+      "title": "交接指南：接手僑生專區的第一份文件",
+      "type": "handbook",
+      "tags": [
+        "handover",
+        "rpage"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "管理理念、你負責什麼、後台在哪裡、第一週該讀什麼",
+      "path": "wiki/handbook/handover-guide.md",
+      "section": "新手上路",
+      "links": [
+        "about",
+        "glossary",
+        "naming-rules",
+        "publish-announcement",
+        "routine-tasks",
+        "rpage-documents",
+        "rpage-info-management",
+        "rpage-modules",
+        "rpage-page-management"
+      ]
+    },
+    {
+      "id": "routine-tasks",
+      "title": "例行工作：每週、每學期、每年",
+      "type": "handbook",
+      "tags": [
+        "routine",
+        "handover"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "每週巡他校、每學期核對僑輔頁、依月份公布獎學金",
+      "path": "wiki/handbook/routine-tasks.md",
+      "section": "例行工作",
+      "links": [
+        "after-graduation",
+        "cantonese-tpe-scholarship",
+        "care-support",
+        "clubs",
+        "delta-thai-north",
+        "event-reviews",
+        "handover-guide",
+        "host-family",
+        "insurance",
+        "moe-grad-outstanding",
+        "nsysu-learning-assistance",
+        "nsysu-needy-grant",
+        "nsysu-thai-myanmar",
+        "ocac-outstanding",
+        "ocah-scholarship-grant",
+        "ocah-shen-memorial",
+        "ocah-thesis-award",
+        "ocfef-scholarship",
+        "orientation",
+        "publish-announcement",
+        "residence",
+        "sea-medical-talent",
+        "sync-to-wiki",
+        "tutoring",
+        "update-event-review",
+        "verify-external-info",
+        "work-in-taiwan",
+        "work-permit"
+      ]
+    },
+    {
+      "id": "rpage-documents",
+      "title": "Rpage 文檔管理：JS、圖片與檔案",
+      "type": "handbook",
+      "tags": [
+        "rpage",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "把 JS、圖片、檔案上傳到文檔，再用 HTML 連結到頁面",
+      "path": "wiki/handbook/rpage-documents.md",
+      "section": "Rpage 功能",
+      "links": [
+        "rpage-modules",
+        "rpage-page-management",
+        "update-event-review"
+      ]
+    },
+    {
+      "id": "rpage-info-management",
+      "title": "Rpage 資訊管理：公告與分類",
+      "type": "handbook",
+      "tags": [
+        "rpage",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "最常用的後台功能：新增公告、管理分類、多語與刪除",
+      "path": "wiki/handbook/rpage-info-management.md",
+      "section": "Rpage 功能",
+      "links": [
+        "glossary",
+        "naming-rules",
+        "publish-announcement",
+        "rpage-page-management"
+      ]
+    },
+    {
+      "id": "rpage-modules",
+      "title": "Rpage 模組管理：用模組組出一頁網頁",
+      "type": "handbook",
+      "tags": [
+        "rpage",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "Rpage 的頁面是由模組組成的：公告、連結、大圖、選單……",
+      "path": "wiki/handbook/rpage-modules.md",
+      "section": "Rpage 功能",
+      "links": [
+        "rpage-documents",
+        "rpage-page-management"
+      ]
+    },
+    {
+      "id": "rpage-page-management",
+      "title": "Rpage 頁面管理：版面、CSS 與 footer",
+      "type": "handbook",
+      "tags": [
+        "rpage",
+        "cms"
+      ],
+      "status": "done",
+      "updated": "2026-11-15",
+      "summary": "調整 CSS、頁首頁尾、放入模組；個別頁面要換僑外組 footer",
+      "path": "wiki/handbook/rpage-page-management.md",
+      "section": "Rpage 功能",
+      "links": [
+        "publish-announcement",
+        "rpage-documents",
+        "rpage-info-management",
+        "rpage-modules"
+      ]
+    },
     {
       "id": "cantonese-tpe-scholarship",
       "title": "台北市廣東同鄉會粵籍大專獎學金",
@@ -633,6 +813,8 @@
       "links": [
         "naming-rules",
         "ocah-scholarship-grant",
+        "rpage-info-management",
+        "rpage-page-management",
         "sync-to-wiki",
         "update-event-review",
         "verify-external-info"
@@ -685,6 +867,7 @@
       ],
       "links": [
         "events",
+        "glossary",
         "naming-rules",
         "publish-announcement"
       ]
@@ -707,7 +890,8 @@
       ],
       "links": [
         "naming-rules",
-        "publish-announcement"
+        "publish-announcement",
+        "routine-tasks"
       ]
     },
     {
@@ -719,10 +903,12 @@
       ],
       "status": "done",
       "updated": "2026-11-15",
-      "summary": "本站是什麼、資料從哪來、怎麼一直更新",
+      "summary": "本站是什麼、為什麼做、怎麼一直更新",
       "path": "wiki/meta/about.md",
       "links": [
-        "sync-to-wiki"
+        "glossary",
+        "handover-guide",
+        "routine-tasks"
       ]
     }
   ]

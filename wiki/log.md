@@ -2,6 +2,13 @@
 
 <!-- 新紀錄加在這行下面 -->
 
+## 2026-11-15 ｜ 結構 ｜ 改版為「Rpage 網站管理傳承手冊」
+- 方向調整：網站主角改為給下一任管理者的管理手冊；僑生資訊保留為「依手冊維護的成果範例」
+- 新增手冊：[[handover-guide]]（含管理理念）、[[routine-tasks]]（每週／每學期／每年）、[[glossary]]、[[rpage-info-management]]、[[rpage-modules]]、[[rpage-page-management]]、[[rpage-documents]]
+- 更新：[[about]]；[[publish-announcement]]、[[update-event-review]]、[[verify-external-info]] 加上手冊連結
+- 結構：schema.json 新增 `handbook` 類型與 `sections`；新增 templates/handbook.md、scripts/check_links.py；CLAUDE.md 改寫 §0 目的與管理理念、§4.2 加入連結檢查、§4.3 改為「更新管理手冊」並新增分類對照表；log 動作類別新增「手冊」
+- 來源：raw/worklog/2026-11-15-9.md、raw/pages/rpage-public-docs-2026-11-15.md
+
 ## 2026-11-15 ｜ 匯入 ｜ 擴充內容：獎助學金、僑輔指南、活動回顧、徵才
 - 新增獎助學金：[[moe-grad-outstanding]]、[[nsysu-needy-grant]]、[[nsysu-learning-assistance]]、[[delta-thai-north]]、[[nsysu-thai-myanmar]]、[[sea-medical-talent]]
 - 新增僑輔指南：[[work-in-taiwan]]、[[host-family]]、[[care-support]]、[[clubs]]
