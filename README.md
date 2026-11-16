@@ -2,7 +2,7 @@
 
 中山大學國際事務處「僑生學位生專區」（平台：Rpage）的**網站管理傳承手冊**，讓下一任管理者接手時不用從零摸索；並附上依手冊維護出來的**僑生資訊成果範例**。
 
-- 🌐 網站：`https://<你的帳號>.github.io/nsysu-ocs-wiki/`
+- 🌐 網站：`https://nathan-0227.github.io/nsysu-ocs-wiki/`
 - 📜 AI 規則：[CLAUDE.md](./CLAUDE.md)（其他 AI 工具請讀 [AGENTS.md](./AGENTS.md)）
 
 > 管理理念：網頁管理是沒有盡頭的優化；一切以使用者（僑生同學）的體驗為出發點。
